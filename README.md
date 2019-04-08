@@ -1,5 +1,6 @@
 
 # json resolve
+Available at https://pub.dartlang.org/packages/json_resolve
 
 ## Description
 json_resolve is a Dart library that helps accessing property in deep json object easily using keypath
