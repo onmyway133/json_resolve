@@ -1,3 +1,8 @@
+///
+/// json_resolve
+/// Created by Khoa Pham
+///
+
 T resolve<T>({Map<String, dynamic> json, String path, T defaultValue}) {
   try {
     dynamic current = json;
