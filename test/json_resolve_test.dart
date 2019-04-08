@@ -3,7 +3,7 @@
 /// Created by Khoa Pham
 ///
 
-import 'package:flutter_test/flutter_test.dart';
+import 'package:test/test.dart';
 import 'package:json_resolve/json_resolve.dart';
 
 void main() {
@@ -24,7 +24,7 @@ void main() {
     "marvel": [
       {
         "name": "Thor",
-        "weapon": "Hammer",
+        "weapon": "Mjolnir",
         "appear": [
           {
             "year": 2011,
@@ -50,7 +50,7 @@ void main() {
     final int byInt = resolve(json: json, path: "earth", defaultValue: 0);
     expect(byInt, 199999);
 
-    final String byIndex = resolve(json: json, path: "dc.2", defaultValue: "error");
+    final String byIndex = resolve(json: json, path: "dc.2.name", defaultValue: "error");
     expect(byIndex, "Wonder Woman");
 
     final String byIndexThenProperty = resolve(json: json, path: "marvel.appear.1.title", defaultValue: "error");
