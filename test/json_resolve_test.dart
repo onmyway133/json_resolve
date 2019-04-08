@@ -53,7 +53,7 @@ void main() {
     final String byIndex = resolve(json: json, path: "dc.2.name", defaultValue: "error");
     expect(byIndex, "Wonder Woman");
 
-    final String byIndexThenProperty = resolve(json: json, path: "marvel.appear.1.title", defaultValue: "error");
+    final String byIndexThenProperty = resolve(json: json, path: "marvel.0.appear.1.title", defaultValue: "error");
     expect(byIndexThenProperty, "The Dark World");
   });
 
