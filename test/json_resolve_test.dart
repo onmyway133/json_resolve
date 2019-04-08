@@ -43,7 +43,7 @@ void main() {
     ]
   };
 
-  test('tests accessing', () {
+  test('resolve', () {
     final String byProperty = resolve(json: json, path: "movie", defaultValue: "error");
     expect(byProperty, "isFun");
 
@@ -57,12 +57,12 @@ void main() {
     expect(byIndexThenProperty, "The Dark World");
   });
 
-  test("test wrong type", () {
+  test("wrong type", () {
     final int byInt = resolve(json: json, path: "marvel.0.name", defaultValue: 999);
     expect(byInt, 999);
   });
 
-  test("test not found", () {
+  test("not found", () {
     final String byString = resolve(json: json, path: "marvel.0.skill", defaultValue: "error");
     expect(byString, "error");
   });
